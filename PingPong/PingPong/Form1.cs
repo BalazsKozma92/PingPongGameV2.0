@@ -112,8 +112,8 @@ namespace PingPong
             {
                 speed_up = -speed_up;
                 score += 1;
-                ball.Width += 2;
-                ball.Height += 2;
+                ball.Width += 6;
+                ball.Height += 6;
                 labelnumber.Text = score.ToString();
                 box5.Hide();
             }
@@ -121,8 +121,8 @@ namespace PingPong
             {
                 speed_up = -speed_up;
                 score += 1;
-                ball.Width -= 2;
-                ball.Height -= 2;
+                ball.Width -= 6;
+                ball.Height -= 6;
                 labelnumber.Text = score.ToString();
                 box6.Hide();
             }
@@ -356,7 +356,7 @@ namespace PingPong
                 int randomNumber = random.Next(1, 8);
                 ball.Top = 50;
                 ball.Left = (area.Width / randomNumber);
-
+                racket.Width = 200;
                  speed_left = 3;
                  speed_up = 3;
                  score = 0;
