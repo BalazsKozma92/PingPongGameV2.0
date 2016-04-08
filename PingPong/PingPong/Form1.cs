@@ -338,7 +338,13 @@ namespace PingPong
                 }
             }
 
-            if (e.KeyCode == Keys.Space && timer1.Enabled == false)
+            if (score == 60)
+            {
+                timer1.Enabled = false;
+                MessageBox.Show("Congratulations! You beat the game!");
+            }
+
+                if (e.KeyCode == Keys.Space && timer1.Enabled == false)
             {
                 timer1.Enabled = true;
                 timer1.Start();
@@ -359,6 +365,8 @@ namespace PingPong
                 int randomNumber = random.Next(1, 8);
                 ball.Top = 50;
                 ball.Left = (area.Width / randomNumber);
+                ball.Width = 15;
+                ball.Height = 15;
                 racket.Width = 200;
                  speed_left = 3;
                  speed_up = 3;
