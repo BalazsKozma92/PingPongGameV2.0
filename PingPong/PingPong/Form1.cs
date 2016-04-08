@@ -112,8 +112,8 @@ namespace PingPong
             {
                 speed_up = -speed_up;
                 score += 1;
-                ball.Width += 6;
-                ball.Height += 6;
+                ball.Width += 10;
+                ball.Height += 10;
                 labelnumber.Text = score.ToString();
                 box5.Hide();
             }
@@ -121,8 +121,11 @@ namespace PingPong
             {
                 speed_up = -speed_up;
                 score += 1;
-                ball.Width -= 6;
-                ball.Height -= 6;
+                if (ball.Width >= 15 || ball.Height >= 15)
+                {
+                    ball.Width -= 6;
+                    ball.Height -= 6;
+                }
                 labelnumber.Text = score.ToString();
                 box6.Hide();
             }
